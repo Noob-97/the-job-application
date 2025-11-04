@@ -1,0 +1,51 @@
+test_conversation,,
+,super cool smiley face,hey i'm super cool smiley face
+,derek,what's up
+end,,
+,,
+test_conversation2,,
+,derek,hello again
+,super cool smiley face,hi
+end,,
+,,
+forest_m,,
+,kyro,you guys wanna hear a scary spooky halloween story
+:talk:,kyro,or are you too scared to hear?
+,amber,no we are not!
+,toby,yeah let's hear!
+,kyro,derek you may want to leave if u think you'll die of the scaryness
+:neutral:,kyro,like you always do
+">stay,leave",forest_stay,forest_leave
+,,
+forest_stay,,
+,derek,nah i'll stay
+,derek,and i'm not scared that easily
+:lookaway:,kyro,sure...
+:neutral:,kyro,ok. so this is the story of the evil.............
+#thunder:excited:,kyro,JOB APPLICATIONS!!!!!!!!!!!!!!!!!!!!!!
+/pause_music:bruh:,toby,bruh
+#boos:bruh:,amber,this is shit
+/resume_music:lookaway:,kyro,i swear this is actually good
+:neutral:,kyro,it's said that there's a secret cult of evil job applications that wants to take over the world
+:talk:,kyro,and they want to strike back november 1st
+:lookaway:,toby,but isn't tomorrow..
+#aah:scared:,toby,"1ST OF NOVEMBER???????????!?!?!()"")(/2"
+:bruh:,amber,aw cmon toby how can you believe that
+:trollface:,kyro,cuz he's a dumbass
+:neutral:,kyro,but he doesn't need to worry cuz job applications only haunt the unemployed people
+,derek,aren't i the only unemployed person here?
+:neutral:,toby,evil job applications are gonna get your ass lol
+,kyro,you know what mcdonalds is also gonna get ur ass bc it's the leader of the cult
+,derek,this is the biggest piece of bullshit ever can we go home
+:talk:,amber,sure i can drive us home!
+:talk:,kyro,haha derek is gonna get fucked tomorrow
+,derek,suck my dick
+:neutral:,kyro,i already did
+,derek,what?
+,derek,whatever...
+end_goto,derek_place,
+,,
+forest_leave,,
+,kyro,haha derek is a baby
+,derek,shut up
+end_goto,forest,

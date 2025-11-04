@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://u5xtv8vdl66r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xfg1"]
+bg_color = Color(0.09620472, 0.09620475, 0.09620469, 0.34901962)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="Tooltip" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 305.0
+offset_top = 512.0
+offset_right = 819.0
+offset_bottom = 558.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2xfg1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.53000003
+anchor_top = 1.0
+anchor_right = 0.53000003
+anchor_bottom = 1.0
+offset_left = -24.2
+offset_top = 523.0
+offset_right = 1129.8
+offset_bottom = 551.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "N/A"
+horizontal_alignment = 1
+uppercase = true

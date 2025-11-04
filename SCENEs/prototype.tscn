@@ -1,0 +1,53 @@
+[gd_scene load_steps=10 format=3 uid="uid://cvvvjiarohhvu"]
+
+[ext_resource type="PackedScene" uid="uid://dce5w1hhja713" path="res://SCENEs/character.tscn" id="1_2xfg1"]
+[ext_resource type="PackedScene" uid="uid://bd1st74a0gwoa" path="res://SCENEs/interacter.tscn" id="2_vxa5a"]
+[ext_resource type="PackedScene" uid="uid://u5xtv8vdl66r" path="res://SCENEs/tooltip.tscn" id="3_vxa5a"]
+[ext_resource type="PackedScene" uid="uid://wlvuou0jwvdg" path="res://SCENEs/dialog.tscn" id="4_fetnm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nk8ey"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_gxbh7"]
+sky_material = SubResource("ProceduralSkyMaterial_nk8ey")
+
+[sub_resource type="Environment" id="Environment_vo8sw"]
+background_mode = 2
+sky = SubResource("Sky_gxbh7")
+tonemap_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nk8ey"]
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gxbh7"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_vo8sw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="plane" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_nk8ey")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plane/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gxbh7")
+
+[node name="character" parent="." instance=ExtResource("1_2xfg1")]
+
+[node name="super cool smiley face" parent="." instance=ExtResource("2_vxa5a")]
+transform = Transform3D(0.405, 0, 0, 0, 0.405, 0, 0, 0, 0.405, 0, 1.3559752, -5.3161964)
+metadata/tooltip = "talk to =name"
+metadata/type = "convo"
+metadata/action = "test_conversation"
+
+[node name="Tooltip" parent="." instance=ExtResource("3_vxa5a")]
+
+[node name="Dialog" parent="." instance=ExtResource("4_fetnm")]

@@ -1,0 +1,331 @@
+[gd_scene load_steps=34 format=3 uid="uid://y6h8eyh4aovt"]
+
+[ext_resource type="PackedScene" uid="uid://dce5w1hhja713" path="res://SCENEs/character.tscn" id="1_oy0vc"]
+[ext_resource type="Shader" uid="uid://cjps5dnit8dej" path="res://SHADERs/select.gdshader" id="2_15vfs"]
+[ext_resource type="Texture2D" uid="uid://ukcggcdkrkek" path="res://PNGs/kyro_neutral.png" id="3_3xxwt"]
+[ext_resource type="PackedScene" uid="uid://wlvuou0jwvdg" path="res://SCENEs/dialog.tscn" id="4_5qcfq"]
+[ext_resource type="Texture2D" uid="uid://bkk2cllyaeop5" path="res://PNGs/fireplace.png" id="4_15vfs"]
+[ext_resource type="Texture2D" uid="uid://ciknpt80bsmjr" path="res://PNGs/toby_neutral.png" id="4_kwben"]
+[ext_resource type="Texture2D" uid="uid://b8j427p4ljh7c" path="res://PNGs/tree.png" id="5_3xxwt"]
+[ext_resource type="Texture2D" uid="uid://b6k7vecxluacm" path="res://PNGs/amber_neutral.png" id="5_kwben"]
+[ext_resource type="PackedScene" uid="uid://u5xtv8vdl66r" path="res://SCENEs/tooltip.tscn" id="9_314en"]
+[ext_resource type="AudioStream" uid="uid://cb1bm8d5ahtc8" path="res://MUSICs/Darkest Child.mp3" id="10_h28uh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r5qku"]
+sky_top_color = Color(0.31128186, 0.37866825, 0.45839113, 1)
+sky_horizon_color = Color(0.038586773, 0.023337925, 0.018230256, 1)
+sky_curve = 0.42426398
+ground_bottom_color = Color(0.039337754, 0.07650667, 0.06590724, 1)
+ground_horizon_color = Color(0.1346209, 0.13824871, 0.14551315, 1)
+ground_curve = 0.25106707
+ground_energy_multiplier = 0.15
+
+[sub_resource type="Sky" id="Sky_gxbh7"]
+sky_material = SubResource("ProceduralSkyMaterial_r5qku")
+
+[sub_resource type="Environment" id="Environment_sly1c"]
+background_mode = 2
+sky = SubResource("Sky_gxbh7")
+sky_custom_fov = 4.5
+reflected_light_source = 2
+tonemap_mode = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_551ff"]
+albedo_color = Color(0, 0.24705473, 0.09752453, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_551ff"]
+material = SubResource("StandardMaterial3D_551ff")
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sfkby"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sfkby"]
+render_priority = 0
+shader = ExtResource("2_15vfs")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("3_3xxwt")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_551ff"]
+atlas = ExtResource("3_3xxwt")
+region = Rect2(0, 0, 588, 858)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfkby"]
+atlas = ExtResource("3_3xxwt")
+region = Rect2(598, 0, 588, 858)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5r2am"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_551ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfkby")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_314en"]
+render_priority = 0
+shader = ExtResource("2_15vfs")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("4_kwben")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy2yl"]
+atlas = ExtResource("5_kwben")
+region = Rect2(0, 0, 599, 734)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjw8d"]
+atlas = ExtResource("5_kwben")
+region = Rect2(619, 0, 599, 734)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_siici"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy2yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjw8d")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_siici"]
+render_priority = 0
+shader = ExtResource("2_15vfs")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("5_kwben")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3xxwt"]
+render_priority = 0
+shader = ExtResource("2_15vfs")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("4_15vfs")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qcfq"]
+atlas = ExtResource("4_15vfs")
+region = Rect2(605, 0, 605, 739)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwben"]
+atlas = ExtResource("4_15vfs")
+region = Rect2(0, 0, 605, 739)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_314en"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qcfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwben")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5qcfq"]
+render_priority = 0
+shader = ExtResource("2_15vfs")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("5_3xxwt")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_314en"]
+atlas = ExtResource("5_3xxwt")
+region = Rect2(0, 0, 483, 891)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h28uh"]
+atlas = ExtResource("5_3xxwt")
+region = Rect2(483, 0, 483, 891)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vy2yl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_314en")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h28uh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sly1c")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0, 0, 0, 1)
+
+[node name="plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.4302495, 0, 0, 0, 1, 0, 0, 0, 4.4467793, 0, 0, 0)
+mesh = SubResource("PlaneMesh_551ff")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plane/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_sfkby")
+
+[node name="character" parent="." instance=ExtResource("1_oy0vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, -0.7439213)
+disable_movement = true
+INTRO_CUTSCENE = true
+
+[node name="kyro" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, 0, 1.3052607, -5.6746645)
+material_override = SubResource("ShaderMaterial_sfkby")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_5r2am")
+autoplay = "default"
+frame_progress = 0.6171892
+
+[node name="toby" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, 2.1260965, 1.1266882, -3.1849387)
+material_override = SubResource("ShaderMaterial_314en")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_siici")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.24344718
+
+[node name="amber" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, -2.401594, 1.0807264, -3.1849387)
+material_override = SubResource("ShaderMaterial_siici")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_siici")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.8537954
+
+[node name="fireplace" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, -0.10702038, 0.47276533, -3.287882)
+material_override = SubResource("ShaderMaterial_3xxwt")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_314en")
+autoplay = "default"
+frame_progress = 0.12538943
+
+[node name="trees" type="Node3D" parent="."]
+
+[node name="tree5" type="AnimatedSprite3D" parent="trees"]
+transform = Transform3D(0.6561002, 0, 0, 0, 0.6561002, 0, 0, 0, 0.6561002, 4.975363, 2.7159796, -4.936679)
+material_override = SubResource("ShaderMaterial_5qcfq")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_vy2yl")
+autoplay = "default"
+frame_progress = 0.4111232
+
+[node name="tree" type="AnimatedSprite3D" parent="trees"]
+transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, 2.2688622, 3.340796, -8.066227)
+material_override = SubResource("ShaderMaterial_5qcfq")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_vy2yl")
+autoplay = "default"
+frame_progress = 0.4071471
+
+[node name="tree2" type="AnimatedSprite3D" parent="trees"]
+transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, -1.8455873, 3.340796, -8.93068)
+material_override = SubResource("ShaderMaterial_5qcfq")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_vy2yl")
+autoplay = "default"
+frame_progress = 0.12378306
+
+[node name="tree3" type="AnimatedSprite3D" parent="trees"]
+transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, -6.090545, 3.340796, -7.329727)
+material_override = SubResource("ShaderMaterial_5qcfq")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_vy2yl")
+autoplay = "default"
+frame_progress = 0.4111232
+
+[node name="tree4" type="AnimatedSprite3D" parent="trees"]
+transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, -7.4591117, 3.340796, -4.0591555)
+material_override = SubResource("ShaderMaterial_5qcfq")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_vy2yl")
+autoplay = "default"
+frame_progress = 0.4111232
+
+[node name="Dialog" parent="." instance=ExtResource("4_5qcfq")]
+
+[node name="Tooltip" parent="." instance=ExtResource("9_314en")]
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("10_h28uh")
+autoplay = true
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer3D" parent="."]
+volume_db = -7.273
+
+[node name="Decision" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Decision"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 540.0
+offset_right = 581.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(0.8750814, 0.8750814, 0, 1)
+text = "STAY"
+metadata/convo = ""
+
+[node name="Button2" type="Button" parent="Decision"]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 540.0
+offset_right = 947.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(0.8750814, 0.8750814, 0, 1)
+text = "LEAVE"

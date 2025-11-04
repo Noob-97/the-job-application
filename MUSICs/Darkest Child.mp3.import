@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cb1bm8d5ahtc8"
+path="res://.godot/imported/Darkest Child.mp3-66af149e7574f8eff69f9b3a6d0f87ef.mp3str"
+
+[deps]
+
+source_file="res://MUSICs/Darkest Child.mp3"
+dest_files=["res://.godot/imported/Darkest Child.mp3-66af149e7574f8eff69f9b3a6d0f87ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
