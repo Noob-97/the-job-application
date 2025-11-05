@@ -49,5 +49,6 @@ metadata/type = "convo"
 metadata/action = "test_conversation"
 
 [node name="Tooltip" parent="." instance=ExtResource("3_vxa5a")]
+visible = true
 
 [node name="Dialog" parent="." instance=ExtResource("4_fetnm")]

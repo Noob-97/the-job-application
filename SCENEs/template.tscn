@@ -1,0 +1,84 @@
+[gd_scene load_steps=14 format=3 uid="uid://bkrcqj68qalme"]
+
+[ext_resource type="PackedScene" uid="uid://dce5w1hhja713" path="res://SCENEs/character.tscn" id="1_pdxh1"]
+[ext_resource type="PackedScene" uid="uid://bl6suo7mksngi" path="res://MODELs/Bed.fbx" id="2_kwhk7"]
+[ext_resource type="PackedScene" uid="uid://u5xtv8vdl66r" path="res://SCENEs/tooltip.tscn" id="3_m7ulq"]
+[ext_resource type="PackedScene" uid="uid://wlvuou0jwvdg" path="res://SCENEs/dialog.tscn" id="4_gn670"]
+[ext_resource type="PackedScene" uid="uid://p6iim273h508" path="res://SCENEs/decision.tscn" id="5_imd2v"]
+[ext_resource type="AudioStream" uid="uid://cb1bm8d5ahtc8" path="res://MUSICs/Darkest Child.mp3" id="6_jh4qq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vshtc"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_gcur6"]
+sky_material = SubResource("ProceduralSkyMaterial_vshtc")
+
+[sub_resource type="Environment" id="Environment_lorc0"]
+background_mode = 2
+sky = SubResource("Sky_gcur6")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_551ff"]
+albedo_color = Color(0, 0.24705473, 0.09752453, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6dcsj"]
+material = SubResource("StandardMaterial3D_551ff")
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hy1ir"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ex2w"]
+size = Vector3(2.025238, 0.5673218, 1.03125)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_lorc0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.4302495, 0, 0, 0, 1, 0, 0, 0, 4.4467793, 0, 0, 0)
+mesh = SubResource("PlaneMesh_6dcsj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plane/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_hy1ir")
+
+[node name="character" parent="." instance=ExtResource("1_pdxh1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.1920929e-07, -0.7439213)
+
+[node name="Bed" parent="." instance=ExtResource("2_kwhk7")]
+transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, 0.48916483, -8.940697e-07, 2.7796214)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bed"]
+
+[node name="Area3D" type="Area3D" parent="Bed/StaticBody3D"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Bed/StaticBody3D/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017349005, 0.30136108, 0.015625)
+shape = SubResource("BoxShape3D_6ex2w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017349005, 0.30136108, 0.015625)
+shape = SubResource("BoxShape3D_6ex2w")
+
+[node name="Tooltip" parent="." instance=ExtResource("3_m7ulq")]
+
+[node name="Dialog" parent="." instance=ExtResource("4_gn670")]
+visible = false
+
+[node name="Decision" parent="." instance=ExtResource("5_imd2v")]
+
+[node name="Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_jh4qq")
+autoplay = true
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer3D" parent="."]
+volume_db = -7.273

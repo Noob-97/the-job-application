@@ -24,7 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6593685, 0)
 
 [node name="camera" type="Camera3D" parent="neck"]
 
-[node name="RayCast3D" type="RayCast3D" parent="neck"]
+[node name="RayCast3D" type="RayCast3D" parent="neck/camera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.114516616)
 target_position = Vector3(0, 0, -5)
 collide_with_areas = true

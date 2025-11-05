@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://p6iim273h508"]
+
+[node name="Decision" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 540.0
+offset_right = 581.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(0.8750814, 0.8750814, 0, 1)
+text = "STAY"
+metadata/convo = ""
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 612.0
+offset_top = 540.0
+offset_right = 947.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(0.8750814, 0.8750814, 0, 1)
+text = "LEAVE"

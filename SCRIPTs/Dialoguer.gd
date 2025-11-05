@@ -21,7 +21,7 @@ var char_speed := 0.01
 @onready var decision := get_node("/root/Node3D/Decision")
 @onready var music := get_node("/root/Node3D/Music")
 @onready var sfx := get_node("/root/Node3D/SFX")
-@onready var interacter := get_node("/root/Node3D/character/neck/RayCast3D")
+@onready var interacter := get_node("/root/Node3D/character/neck/camera/RayCast3D")
 
 func _ready():
 	load_csv("res://tja-dialog - Sheet1.txt")
@@ -118,7 +118,10 @@ func show_current_line():
 	
 	var entry = convo[current_index]
 	write_text("> %s: %s" % [entry["speaker"], entry["text"]])
-	dialog.get_child(1).set("theme_override_colors/font_color", colors[entry["speaker"]])
+	if colors.has(entry["speaker"]):
+		dialog.get_child(1).set("theme_override_colors/font_color", colors[entry["speaker"]])
+	else:
+		dialog.get_child(1).set("theme_override_colors/font_color", Color(0.667, 0.667, 0.667, 1.0))
 	sfx.stop()
 	
 	var emotion = entry["command"]

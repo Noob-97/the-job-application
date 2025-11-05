@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://y6h8eyh4aovt"]
+[gd_scene load_steps=35 format=3 uid="uid://y6h8eyh4aovt"]
 
 [ext_resource type="PackedScene" uid="uid://dce5w1hhja713" path="res://SCENEs/character.tscn" id="1_oy0vc"]
 [ext_resource type="Shader" uid="uid://cjps5dnit8dej" path="res://SHADERs/select.gdshader" id="2_15vfs"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b6k7vecxluacm" path="res://PNGs/amber_neutral.png" id="5_kwben"]
 [ext_resource type="PackedScene" uid="uid://u5xtv8vdl66r" path="res://SCENEs/tooltip.tscn" id="9_314en"]
 [ext_resource type="AudioStream" uid="uid://cb1bm8d5ahtc8" path="res://MUSICs/Darkest Child.mp3" id="10_h28uh"]
+[ext_resource type="PackedScene" uid="uid://p6iim273h508" path="res://SCENEs/decision.tscn" id="11_vy2yl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r5qku"]
 sky_top_color = Color(0.31128186, 0.37866825, 0.45839113, 1)
@@ -30,11 +31,11 @@ sky_custom_fov = 4.5
 reflected_light_source = 2
 tonemap_mode = 4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_551ff"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjw8d"]
 albedo_color = Color(0, 0.24705473, 0.09752453, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_551ff"]
-material = SubResource("StandardMaterial3D_551ff")
+material = SubResource("StandardMaterial3D_jjw8d")
 size = Vector2(20, 20)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sfkby"]
@@ -304,28 +305,4 @@ parameters/looping = true
 [node name="SFX" type="AudioStreamPlayer3D" parent="."]
 volume_db = -7.273
 
-[node name="Decision" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button" type="Button" parent="Decision"]
-layout_mode = 0
-offset_left = 246.0
-offset_top = 540.0
-offset_right = 581.0
-offset_bottom = 573.0
-theme_override_colors/font_color = Color(0.8750814, 0.8750814, 0, 1)
-text = "STAY"
-metadata/convo = ""
-
-[node name="Button2" type="Button" parent="Decision"]
-layout_mode = 0
-offset_left = 612.0
-offset_top = 540.0
-offset_right = 947.0
-offset_bottom = 573.0
-theme_override_colors/font_color = Color(0.8750814, 0.8750814, 0, 1)
-text = "LEAVE"
+[node name="Decision" parent="." instance=ExtResource("11_vy2yl")]
