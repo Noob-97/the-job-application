@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dslr7wimlymtc"]
+
+[ext_resource type="Shader" uid="uid://cjps5dnit8dej" path="res://SHADERs/select.gdshader" id="1_o6elh"]
+[ext_resource type="Texture2D" uid="uid://dlxu7dhj1m2tc" path="res://PNGs/faces.png" id="2_m2tfc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vxa5a"]
+render_priority = 0
+shader = ExtResource("1_o6elh")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("2_m2tfc")
+shader_parameter/line_color = Color(1, 1, 0, 1)
+shader_parameter/glowSize = 9.56400045429
+shader_parameter/glowDensity = 30
+shader_parameter/glowRadialCoverage = 32
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 5.0
+shader_parameter/alphaThreshold = 0.162000007695
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fetnm"]
+atlas = ExtResource("2_m2tfc")
+region = Rect2(0, 0, 302, 263)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5rb6"]
+atlas = ExtResource("2_m2tfc")
+region = Rect2(302, 0, 302, 263)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4y3qp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fetnm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5rb6")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 2.0
+}]
+
+[node name="animated" type="AnimatedSprite3D"]
+transform = Transform3D(0.405, 0, 0, 0, 0.405, 0, 0, 0, 0.405, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_vxa5a")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_4y3qp")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.85401434

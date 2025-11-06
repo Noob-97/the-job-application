@@ -10,10 +10,16 @@ const JUMP_VELOCITY = 4.5
 @export var disable_movement := false
 
 @export var INTRO_CUTSCENE := false
+@export var GOOD_CUTSCENE := false
+@export var BAD_CUTSCENE := false
 
 func _ready() -> void:
 	if INTRO_CUTSCENE:
 		Dialoguer.start_conversation("forest_m")
+	if GOOD_CUTSCENE:
+		Dialoguer.start_conversation("good_ending")
+	if BAD_CUTSCENE:
+		Dialoguer.start_conversation("bad_ending")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:

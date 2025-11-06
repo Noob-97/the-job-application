@@ -22,6 +22,7 @@ var char_speed := 0.01
 @onready var music := get_node("/root/Node3D/Music")
 @onready var sfx := get_node("/root/Node3D/SFX")
 @onready var interacter := get_node("/root/Node3D/character/neck/camera/RayCast3D")
+@onready var blackscreen := get_node("/root/Node3D/Blackscreen")
 
 func _ready():
 	load_csv("res://tja-dialog - Sheet1.txt")
@@ -139,12 +140,15 @@ func show_current_line():
 				music.stop()
 			"/resume_music":
 				music.play(music_playback)
+			"/black_screen":
+				blackscreen.visible = true
+
 	elif entry["command"].contains("#"):
 		var sound = load("res://SFXs/"+ revisedentry.replace("#", "") +".mp3")
 		sfx.stream = sound	
 		sfx.play()
 	
-	if emotion != "" and not emotion == null:
+	if emotion != "" and not emotion == null and emotion != "/black_screen" and emotion != "#fighting" and emotion != "#aah" and emotion != "#laugh":
 		emotion = emotion.replace(":", "")
 		var png = load("res://PNGs/" + entry["speaker"] + "_" +emotion + ".png")
 		var node = get_node("/root/Node3D/" + entry["speaker"])

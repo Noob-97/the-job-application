@@ -1,24 +1,30 @@
-[gd_scene load_steps=56 format=3 uid="uid://bwfgcmpdbgy48"]
+[gd_scene load_steps=70 format=3 uid="uid://ckny06m66833x"]
 
-[ext_resource type="PackedScene" uid="uid://dce5w1hhja713" path="res://SCENEs/character.tscn" id="1_6ex2w"]
-[ext_resource type="PackedScene" uid="uid://bl6suo7mksngi" path="res://MODELs/Bed.fbx" id="2_rwky2"]
-[ext_resource type="Shader" uid="uid://wwmlss2pn6ag" path="res://SHADERs/outline.gdshader" id="3_6dcsj"]
-[ext_resource type="PackedScene" uid="uid://u5xtv8vdl66r" path="res://SCENEs/tooltip.tscn" id="3_vshtc"]
-[ext_resource type="PackedScene" uid="uid://wlvuou0jwvdg" path="res://SCENEs/dialog.tscn" id="4_gcur6"]
-[ext_resource type="Texture2D" uid="uid://dpprboc8ghf44" path="res://PNGs/window.png" id="4_hy1ir"]
-[ext_resource type="PackedScene" uid="uid://p6iim273h508" path="res://SCENEs/decision.tscn" id="5_lorc0"]
-[ext_resource type="Texture2D" uid="uid://b865b2ogxyifx" path="res://PNGs/bookshelf.png" id="8_44ika"]
-[ext_resource type="PackedScene" uid="uid://c0eww41vmq2i7" path="res://MODELs/3d_crafting_table.glb" id="8_dt1hj"]
-[ext_resource type="PackedScene" uid="uid://c47kobb3uo2mi" path="res://MODELs/furnace.glb" id="9_d22xn"]
-[ext_resource type="Texture2D" uid="uid://d3bh3ovqih0wx" path="res://PNGs/closet.png" id="9_dt1hj"]
-[ext_resource type="PackedScene" uid="uid://l5re21nera10" path="res://MODELs/minecraft_wood_block.glb" id="10_dgg2a"]
-[ext_resource type="Shader" uid="uid://cjps5dnit8dej" path="res://SHADERs/select.gdshader" id="10_x4cme"]
-[ext_resource type="Texture2D" uid="uid://cb3kr2bg7okjs" path="res://PNGs/rooflamp.png" id="11_d22xn"]
-[ext_resource type="Texture2D" uid="uid://bgycu6uvqccwq" path="res://PNGs/tv.png" id="15_dgg2a"]
-[ext_resource type="PackedScene" uid="uid://dsuwll2vsf4u4" path="res://MODELs/couch__-_minecraft.glb" id="16_ivkpi"]
-[ext_resource type="Texture2D" uid="uid://pdlwhk12ftbm" path="res://PNGs/door.png" id="17_tuj0t"]
-[ext_resource type="Texture2D" uid="uid://c5fd8ddc7pb6w" path="res://PNGs/wii_u.webp" id="18_iytax"]
-[ext_resource type="Texture2D" uid="uid://crfwv4t1v72dx" path="res://PNGs/wiimote.png" id="19_iytax"]
+[ext_resource type="PackedScene" uid="uid://dce5w1hhja713" path="res://SCENEs/character.tscn" id="1_28w30"]
+[ext_resource type="PackedScene" uid="uid://bl6suo7mksngi" path="res://MODELs/Bed.fbx" id="2_hvjqy"]
+[ext_resource type="Shader" uid="uid://wwmlss2pn6ag" path="res://SHADERs/outline.gdshader" id="3_5cjeg"]
+[ext_resource type="Texture2D" uid="uid://dpprboc8ghf44" path="res://PNGs/window.png" id="4_k8vvg"]
+[ext_resource type="PackedScene" uid="uid://dtyrovnxme447" path="res://SCENEs/blackscreen.tscn" id="5_0ge0q"]
+[ext_resource type="PackedScene" uid="uid://u5xtv8vdl66r" path="res://SCENEs/tooltip.tscn" id="5_uggdc"]
+[ext_resource type="PackedScene" uid="uid://wlvuou0jwvdg" path="res://SCENEs/dialog.tscn" id="6_ma8oq"]
+[ext_resource type="PackedScene" uid="uid://p6iim273h508" path="res://SCENEs/decision.tscn" id="7_0ge0q"]
+[ext_resource type="PackedScene" uid="uid://c0eww41vmq2i7" path="res://MODELs/3d_crafting_table.glb" id="8_dhvsn"]
+[ext_resource type="PackedScene" uid="uid://c47kobb3uo2mi" path="res://MODELs/furnace.glb" id="9_c2u7v"]
+[ext_resource type="PackedScene" uid="uid://l5re21nera10" path="res://MODELs/minecraft_wood_block.glb" id="10_gy7xb"]
+[ext_resource type="Texture2D" uid="uid://b865b2ogxyifx" path="res://PNGs/bookshelf.png" id="11_mkm1i"]
+[ext_resource type="Texture2D" uid="uid://d3bh3ovqih0wx" path="res://PNGs/closet.png" id="12_1ebea"]
+[ext_resource type="Shader" uid="uid://cjps5dnit8dej" path="res://SHADERs/select.gdshader" id="13_j6dek"]
+[ext_resource type="Texture2D" uid="uid://cb3kr2bg7okjs" path="res://PNGs/rooflamp.png" id="14_y8ij7"]
+[ext_resource type="Texture2D" uid="uid://bgycu6uvqccwq" path="res://PNGs/tv.png" id="15_aliub"]
+[ext_resource type="PackedScene" uid="uid://dsuwll2vsf4u4" path="res://MODELs/couch__-_minecraft.glb" id="16_dbdl1"]
+[ext_resource type="Texture2D" uid="uid://pdlwhk12ftbm" path="res://PNGs/door.png" id="17_achnl"]
+[ext_resource type="Texture2D" uid="uid://c5fd8ddc7pb6w" path="res://PNGs/wii_u.webp" id="18_6rq6n"]
+[ext_resource type="Texture2D" uid="uid://crfwv4t1v72dx" path="res://PNGs/wiimote.png" id="19_l0b5f"]
+[ext_resource type="Texture2D" uid="uid://cu02h7a7i7ri" path="res://PNGs/kyro_stand_neutral.png" id="20_ma8oq"]
+[ext_resource type="Texture2D" uid="uid://ukcggcdkrkek" path="res://PNGs/kyro_neutral.png" id="21_0ge0q"]
+[ext_resource type="Texture2D" uid="uid://dfk72gnpoacpu" path="res://PNGs/toby_stand_neutral.png" id="22_dhvsn"]
+[ext_resource type="Texture2D" uid="uid://b6k7vecxluacm" path="res://PNGs/amber_neutral.png" id="23_c2u7v"]
+[ext_resource type="Texture2D" uid="uid://44oml3n2to0a" path="res://PNGs/amber_stand_neutral.png" id="24_gy7xb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vshtc"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,13 +48,10 @@ size = Vector2(20, 20)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hy1ir"]
 data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6ex2w"]
-size = Vector3(2.0104733, 0.85739136, 1.0527649)
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_io1yi"]
 render_priority = 0
-shader = ExtResource("3_6dcsj")
-shader_parameter/sprite_texture = ExtResource("4_hy1ir")
+shader = ExtResource("3_5cjeg")
+shader_parameter/sprite_texture = ExtResource("4_k8vvg")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 3
@@ -58,11 +61,11 @@ shader_parameter/glowSharpness = 1.0
 shader_parameter/alphaThreshold = 0.2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wjqk1"]
-atlas = ExtResource("4_hy1ir")
+atlas = ExtResource("4_k8vvg")
 region = Rect2(5, 0, 294, 313)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_44ika"]
-atlas = ExtResource("4_hy1ir")
+atlas = ExtResource("4_k8vvg")
 region = Rect2(299, 0, 294, 313)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dt1hj"]
@@ -90,8 +93,8 @@ size = Vector3(201.505, 199.98, 201.81282)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_dgg2a"]
 render_priority = 0
-shader = ExtResource("3_6dcsj")
-shader_parameter/sprite_texture = ExtResource("8_44ika")
+shader = ExtResource("3_5cjeg")
+shader_parameter/sprite_texture = ExtResource("11_mkm1i")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 3
@@ -101,11 +104,11 @@ shader_parameter/glowSharpness = 1.0
 shader_parameter/alphaThreshold = 0.2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ivkpi"]
-atlas = ExtResource("8_44ika")
+atlas = ExtResource("11_mkm1i")
 region = Rect2(0, 0, 338, 323)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hyyw7"]
-atlas = ExtResource("8_44ika")
+atlas = ExtResource("11_mkm1i")
 region = Rect2(338, 0, 338, 323)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tuj0t"]
@@ -124,8 +127,8 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iytax"]
 render_priority = 0
-shader = ExtResource("3_6dcsj")
-shader_parameter/sprite_texture = ExtResource("9_dt1hj")
+shader = ExtResource("3_5cjeg")
+shader_parameter/sprite_texture = ExtResource("12_1ebea")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 3
@@ -135,11 +138,11 @@ shader_parameter/glowSharpness = 1.0
 shader_parameter/alphaThreshold = 0.2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rb5hd"]
-atlas = ExtResource("9_dt1hj")
+atlas = ExtResource("12_1ebea")
 region = Rect2(0, 0, 355, 445)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jio10"]
-atlas = ExtResource("9_dt1hj")
+atlas = ExtResource("12_1ebea")
 region = Rect2(355, 0, 355, 445)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dp0if"]
@@ -158,9 +161,9 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b6u0u"]
 render_priority = 0
-shader = ExtResource("10_x4cme")
+shader = ExtResource("13_j6dek")
 shader_parameter/billboard = Vector3(0, 0, 0)
-shader_parameter/sprite_texture = ExtResource("11_d22xn")
+shader_parameter/sprite_texture = ExtResource("14_y8ij7")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 3
@@ -170,11 +173,11 @@ shader_parameter/glowSharpness = 1.0
 shader_parameter/alphaThreshold = 0.2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7e5ur"]
-atlas = ExtResource("11_d22xn")
+atlas = ExtResource("14_y8ij7")
 region = Rect2(0, 0, 135, 377)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hcsu4"]
-atlas = ExtResource("11_d22xn")
+atlas = ExtResource("14_y8ij7")
 region = Rect2(135, 0, 135, 377)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sv2u8"]
@@ -193,8 +196,8 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ivkpi"]
 render_priority = 0
-shader = ExtResource("3_6dcsj")
-shader_parameter/sprite_texture = ExtResource("15_dgg2a")
+shader = ExtResource("3_5cjeg")
+shader_parameter/sprite_texture = ExtResource("15_aliub")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 3
@@ -204,11 +207,11 @@ shader_parameter/glowSharpness = 1.0
 shader_parameter/alphaThreshold = 0.2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuj0t"]
-atlas = ExtResource("15_dgg2a")
+atlas = ExtResource("15_aliub")
 region = Rect2(295, 0, 295, 240)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iytax"]
-atlas = ExtResource("15_dgg2a")
+atlas = ExtResource("15_aliub")
 region = Rect2(0, 0, 295, 240)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rb5hd"]
@@ -227,8 +230,8 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rb5hd"]
 render_priority = 0
-shader = ExtResource("3_6dcsj")
-shader_parameter/sprite_texture = ExtResource("17_tuj0t")
+shader = ExtResource("3_5cjeg")
+shader_parameter/sprite_texture = ExtResource("17_achnl")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 3
@@ -238,11 +241,11 @@ shader_parameter/glowSharpness = 1.0
 shader_parameter/alphaThreshold = 0.2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dp0if"]
-atlas = ExtResource("17_tuj0t")
+atlas = ExtResource("17_achnl")
 region = Rect2(0, 0, 220, 316)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6u0u"]
-atlas = ExtResource("17_tuj0t")
+atlas = ExtResource("17_achnl")
 region = Rect2(220, 0, 220, 316)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7e5ur"]
@@ -261,9 +264,9 @@ animations = [{
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hcsu4"]
 render_priority = 0
-shader = ExtResource("10_x4cme")
+shader = ExtResource("13_j6dek")
 shader_parameter/billboard = Vector3(0, 0, 0)
-shader_parameter/sprite_texture = ExtResource("18_iytax")
+shader_parameter/sprite_texture = ExtResource("18_6rq6n")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 26.538001260555
 shader_parameter/glowDensity = 3
@@ -274,8 +277,91 @@ shader_parameter/alphaThreshold = 0.2
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jio10"]
 render_priority = 0
-shader = ExtResource("3_6dcsj")
-shader_parameter/sprite_texture = ExtResource("19_iytax")
+shader = ExtResource("3_5cjeg")
+shader_parameter/sprite_texture = ExtResource("19_l0b5f")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mkm1i"]
+render_priority = 0
+shader = ExtResource("13_j6dek")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("20_ma8oq")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_551ff"]
+atlas = ExtResource("21_0ge0q")
+region = Rect2(0, 0, 588, 858)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfkby"]
+atlas = ExtResource("21_0ge0q")
+region = Rect2(598, 0, 588, 858)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ebea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_551ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfkby")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j6dek"]
+render_priority = 0
+shader = ExtResource("13_j6dek")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("22_dhvsn")
+shader_parameter/line_color = Color(1, 1, 1, 1)
+shader_parameter/glowSize = 15.0
+shader_parameter/glowDensity = 3
+shader_parameter/glowRadialCoverage = 4
+shader_parameter/glowAngle = 1.57
+shader_parameter/glowSharpness = 1.0
+shader_parameter/alphaThreshold = 0.2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy2yl"]
+atlas = ExtResource("23_c2u7v")
+region = Rect2(0, 0, 599, 734)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjw8d"]
+atlas = ExtResource("23_c2u7v")
+region = Rect2(619, 0, 599, 734)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y8ij7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy2yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjw8d")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aliub"]
+render_priority = 0
+shader = ExtResource("13_j6dek")
+shader_parameter/billboard = Vector3(0, 0, 0)
+shader_parameter/sprite_texture = ExtResource("24_gy7xb")
 shader_parameter/line_color = Color(1, 1, 1, 1)
 shader_parameter/glowSize = 15.0
 shader_parameter/glowDensity = 3
@@ -291,6 +377,8 @@ environment = SubResource("Environment_lorc0")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(0.35406289, 0.35406289, 0.35406286, 1)
+light_energy = 0.5
 light_angular_distance = 90.0
 light_specular = 0.0
 
@@ -303,26 +391,16 @@ mesh = SubResource("PlaneMesh_6dcsj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plane/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hy1ir")
 
-[node name="character" parent="." instance=ExtResource("1_6ex2w")]
-transform = Transform3D(1.415, 0, 0, 0, 1.415, 0, 0, 0, 1.415, -2.3340812, -0.2385081, 1.9506216)
+[node name="character" parent="." instance=ExtResource("1_28w30")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3701353, 0.1148814, 3.895102)
+disable_movement = true
+GOOD_CUTSCENE = true
 
-[node name="Bed" parent="." instance=ExtResource("2_rwky2")]
+[node name="Bed" parent="." instance=ExtResource("2_hvjqy")]
 transform = Transform3D(-5.6824803e-08, 0, 1.3, 0, 1.3, 0, -1.3, 0, -5.6824803e-08, 1.3540378, 0.022491693, 3.734219)
 metadata/type = "change_scene"
 metadata/tooltip = "GO TO BED"
 metadata/action = "backrooms"
-
-[node name="Area3D" type="Area3D" parent="Bed"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04336214, 0.30136108, -0.0029144287)
-shape = SubResource("BoxShape3D_6ex2w")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Bed"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04336214, 0.30136108, -0.0029144287)
-shape = SubResource("BoxShape3D_6ex2w")
 
 [node name="Music" type="AudioStreamPlayer3D" parent="."]
 autoplay = true
@@ -337,12 +415,15 @@ billboard = 2
 sprite_frames = SubResource("SpriteFrames_dt1hj")
 frame_progress = 0.9531287
 
-[node name="Tooltip" parent="." instance=ExtResource("3_vshtc")]
-
-[node name="Dialog" parent="." instance=ExtResource("4_gcur6")]
+[node name="Blackscreen" parent="." instance=ExtResource("5_0ge0q")]
 visible = false
 
-[node name="Decision" parent="." instance=ExtResource("5_lorc0")]
+[node name="Tooltip" parent="." instance=ExtResource("5_uggdc")]
+
+[node name="Dialog" parent="." instance=ExtResource("6_ma8oq")]
+visible = false
+
+[node name="Decision" parent="." instance=ExtResource("7_0ge0q")]
 
 [node name="plane2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.543458e-08, 0.99999994, 0, -0.81064874, -4.3711385e-08, 0, 0, 0, 1.0758826, -4.9894648, 0, 0)
@@ -354,7 +435,7 @@ mesh = SubResource("PlaneMesh_6dcsj")
 shape = SubResource("ConcavePolygonShape3D_hy1ir")
 
 [node name="plane3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.543458e-08, -0.99999994, 0, 0.81064874, -4.3711385e-08, 0, 0, 0, 1.0758826, 2.3757524, 0, 0)
+transform = Transform3D(-3.543458e-08, -0.99999994, 0, 0.81064874, -4.3711385e-08, 0, 0, 0, 1.0758826, 2.3718195, 0.009973288, -0.0024430752)
 mesh = SubResource("PlaneMesh_6dcsj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="plane3"]
@@ -389,7 +470,7 @@ mesh = SubResource("PlaneMesh_6dcsj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plane6/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_hy1ir")
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("8_dt1hj")]
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("8_dhvsn")]
 transform = Transform3D(-0.122573294, 0, -1.4297554, 0, 1.435, 0, 1.4297554, 0, -0.122573294, -1.5911814, 0, 4.801775)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene"]
@@ -398,7 +479,7 @@ transform = Transform3D(-0.122573294, 0, -1.4297554, 0, 1.435, 0, 1.4297554, 0, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5013733, 0)
 shape = SubResource("BoxShape3D_x4cme")
 
-[node name="Sketchfab_Scene2" parent="." instance=ExtResource("9_d22xn")]
+[node name="Sketchfab_Scene2" parent="." instance=ExtResource("9_c2u7v")]
 transform = Transform3D(-2.345, 0, -3.5408516e-07, 0, 2.345, 0, 3.5408516e-07, 0, -2.345, -3.2203097, 0.6472676, 4.845993)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene2"]
@@ -407,7 +488,7 @@ transform = Transform3D(-2.345, 0, -3.5408516e-07, 0, 2.345, 0, 3.5408516e-07, 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.033676505, -0.09967041, -0.0052189827)
 shape = SubResource("BoxShape3D_ivkpi")
 
-[node name="Sketchfab_Scene3" parent="." instance=ExtResource("10_dgg2a")]
+[node name="Sketchfab_Scene3" parent="." instance=ExtResource("10_gy7xb")]
 transform = Transform3D(0.007, 0, 0, 0, 0.007, 0, 0, 0, 0.007, -3.8563278, 0.7490481, -0.56444025)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene3"]
@@ -434,7 +515,7 @@ material_override = SubResource("ShaderMaterial_b6u0u")
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_sv2u8")
 
-[node name="Sketchfab_Scene4" parent="." instance=ExtResource("10_dgg2a")]
+[node name="Sketchfab_Scene4" parent="." instance=ExtResource("10_gy7xb")]
 transform = Transform3D(3.7235055e-05, 0.0069965934, 0.00021514381, -0.006992554, 2.7323595e-05, 0.00032162704, 0.00032063053, -0.00021662576, 0.0069892956, -3.8563278, 0.7490481, -1.975858)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene4"]
@@ -450,26 +531,53 @@ billboard = 2
 sprite_frames = SubResource("SpriteFrames_rb5hd")
 frame_progress = 0.5397597
 
-[node name="Sketchfab_Scene5" parent="." instance=ExtResource("16_ivkpi")]
+[node name="Sketchfab_Scene5" parent="." instance=ExtResource("16_dbdl1")]
 transform = Transform3D(-0.00053615915, 0, 0.07999822, 0, 0.08, 0, -0.07999822, 0, -0.00053615915, 0.9355482, 0, -1.2996484)
 
 [node name="animated6" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(-6.272584e-08, 0, 1.435, 0, 1.435, 0, -1.435, 0, -6.272584e-08, -4.8533173, 2.208496, -4.870794)
 material_override = SubResource("ShaderMaterial_rb5hd")
+modulate = Color(0.37187055, 0.31521547, 1, 1)
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_7e5ur")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.11000001, 0, 0, 0, 0.11000001, 0, 0, 0, 0.11000001, -3.4662683, 0.30470777, 0.79794776)
 material_override = SubResource("ShaderMaterial_hcsu4")
-texture = ExtResource("18_iytax")
+texture = ExtResource("18_6rq6n")
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.16744237, -0.050872885, -2.2237243e-09, 0, -7.649493e-09, 0.175, -0.050872885, -0.16744237, -7.3191386e-09, -0.9648846, 0.49107838, -1.4528394)
 material_override = SubResource("ShaderMaterial_jio10")
-texture = ExtResource("19_iytax")
+texture = ExtResource("19_l0b5f")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(0.17373253, -0.021023948, -9.1898594e-10, 0, -7.649493e-09, 0.175, -0.021023948, -0.17373253, -7.594091e-09, -0.6876364, 0.49107838, -1.4528394)
 material_override = SubResource("ShaderMaterial_jio10")
-texture = ExtResource("19_iytax")
+texture = ExtResource("19_l0b5f")
+
+[node name="kyro" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, -0.62235063, 1.3052607, 1.7472086)
+material_override = SubResource("ShaderMaterial_mkm1i")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_1ebea")
+autoplay = "default"
+frame_progress = 0.7184367
+
+[node name="toby" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, 1.1010892, 1.1266882, 1.7112691)
+material_override = SubResource("ShaderMaterial_j6dek")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_y8ij7")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.6517712
+
+[node name="amber" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.315, 0, 0, 0, 0.315, 0, 0, 0, 0.315, -0.49617124, 1.0807264, 3.730881)
+material_override = SubResource("ShaderMaterial_aliub")
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_y8ij7")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.7567311

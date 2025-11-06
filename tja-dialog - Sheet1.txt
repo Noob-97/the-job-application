@@ -15,7 +15,7 @@ forest_m,,
 ,toby,yeah let's hear!
 ,kyro,derek you may want to leave if u think you'll die of the scaryness
 :neutral:,kyro,like you always do
-">stay,leave",forest_stay,forest_leave
+">stay,leave (skip)",forest_stay,forest_leave
 ,,
 forest_stay,,
 ,derek,nah i'll stay
@@ -48,4 +48,44 @@ end_goto,derek_place,
 forest_leave,,
 ,kyro,haha derek is a baby
 ,derek,shut up
-end_goto,forest,
+end_goto,derek_place,
+,,
+good_ending,,
+,derek,woah guys what are you doing here
+,derek,how did you enter my house
+,toby,well we broke in :)
+:stand_talk:,amber,yeah sorry about that... your door is broken.
+,derek,what the fuck!
+,derek,and for what!
+:stand_talk:,toby,to scare you while you were sleeping for course!
+:stand_lookaway:,amber,well or at least we tried..
+:stand_talk:,amber,kyro was trying to make you dream about evil ronald mcdonald killing you
+,amber,like before's story!
+,derek,kyro i swear one day im gonna brake into YOUR house and rip each one of your limbs
+,derek,AND STOP LAUGHING
+:stand_excited:,kyro,u dont have the balls
+/black_screen,derek,oh you son of a
+#fighting,amber,guys dont fight T-T
+,derek,well if kyro wasn't that much of a dick i wouldn't >:C
+,kyro,haha he's getting maaaaaad >:DD
+end_goto,good_ending_screen,
+,,
+bad_ending,,
+#aah,derek,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH
+#laugh,kyro,HAHAHAAAGAHAHAHAHHAAAHHAHAHAHAHFHGDHFGS
+,derek,what the fuck is going on?
+,amber,were you scared of ronald and your job application?
+,toby,you cannot believe how funny it was to watch you suffer having that nightmare
+,derek,what
+,derek,how do you know about my ronald mcdonalds evil nightmare
+:stand_talk:,amber,well kyro was trying to make you dream about it by whispering weird shit to you while you slept
+,derek,how the hell does that work
+,toby,idk this is a videogame after all BUT IT WORKED AND RONALD CAUGHT YOUR ASS!!!!!!!!!!!!
+:stand_talk:,kyro,imagine dying to ronald mcdonald
+/black_screen,derek,shut up
+end_goto,bad_ending_screen,
+,,
+after_bad_ending,,
+,derek,huh..
+,derek,i wonder what would have happened if i got to escape that maze..
+end,,

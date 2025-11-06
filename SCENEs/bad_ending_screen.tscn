@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv3gspnwd5uff"]
+
+[ext_resource type="PackedScene" uid="uid://dtyrovnxme447" path="res://SCENEs/blackscreen.tscn" id="1_2dmgc"]
+[ext_resource type="Script" uid="uid://caa3x8ybcfsw" path="res://SCRIPTs/restart.gd" id="2_gqx1w"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Blackscreen" parent="." instance=ExtResource("1_2dmgc")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 121.0
+offset_right = 766.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 51
+text = "Bad Ending"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 284.0
+offset_right = 599.0
+offset_bottom = 411.0
+theme_override_colors/font_color = Color(4.3317675e-07, 0.45475453, 0.62205696, 1)
+theme_override_font_sizes/font_size = 31
+text = "(i wonder what would have happened if i got to escape that maze..)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 288.0
+offset_right = 943.0
+offset_bottom = 414.0
+theme_override_font_sizes/font_size = 31
+text = "RETRY!"
+script = ExtResource("2_gqx1w")
+
+[connection signal="pressed" from="Button" to="Button" method="restart"]

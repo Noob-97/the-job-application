@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://bywnnwuma3fe7"]
+
+[ext_resource type="PackedScene" uid="uid://dtyrovnxme447" path="res://SCENEs/blackscreen.tscn" id="1_gqux7"]
+[ext_resource type="Script" uid="uid://caa3x8ybcfsw" path="res://SCRIPTs/restart.gd" id="2_ikhge"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Blackscreen" parent="." instance=ExtResource("1_gqux7")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 121.0
+offset_right = 766.0
+offset_bottom = 194.0
+theme_override_font_sizes/font_size = 51
+text = "Good Ending"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 284.0
+offset_right = 511.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 51
+text = "Made by"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 69.0
+offset_right = 398.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 31
+text = "_noobz & trenxor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 626.0
+offset_top = 288.0
+offset_right = 943.0
+offset_bottom = 414.0
+theme_override_font_sizes/font_size = 31
+text = "PLAY AGAIN!"
+script = ExtResource("2_ikhge")
+
+[connection signal="pressed" from="Button" to="Button" method="restart"]
